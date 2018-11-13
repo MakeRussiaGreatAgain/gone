@@ -1,6 +1,5 @@
-const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=YOUR_API_KEY`;
-
-export async function getNews() {
+export async function getNews(country) {
+    const url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=d64eed54a8d149798443e3e97a5ef086`;
     let result = await fetch(url).then(response => response.json());
     return result.articles;
 }
